@@ -10,14 +10,14 @@ if [ -d /bundle ]; then
   # echo "=> [zhaoic] fix fibers"
   # npm uninstall fibers
   # npm install fibers
-  npm i
+  npm i --unsafe-perm
   cd /bundle/bundle/
 elif [[ $BUNDLE_URL ]]; then
   cd /tmp
   curl -L -o bundle.tar.gz $BUNDLE_URL
   tar xzf bundle.tar.gz
   cd /tmp/bundle/programs/server/
-  npm i
+  npm i --unsafe-perm
   cd /tmp/bundle/
 elif [ -d /built_app ]; then
   cd /built_app

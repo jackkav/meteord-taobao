@@ -10,7 +10,7 @@ if [ -d /bundle ]; then
   # echo "=> [zhaoic] fix fibers"
   # npm uninstall fibers
   # npm install fibers
-  npm i --unsafe-perm
+  npm i --unsafe-perm &>/dev/null
   cd /bundle/bundle/
 elif [[ $BUNDLE_URL ]]; then
   cd /tmp
